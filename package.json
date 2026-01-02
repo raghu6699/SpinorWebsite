@@ -1,0 +1,9 @@
+{
+  "name": "spinor-website",
+  "version": "1.0.0",
+  "description": "Spinor Innovations website",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site served by Vercel'"
+  }
+}

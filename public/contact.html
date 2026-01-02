@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Spinor Innovations | Get in Touch</title>
+    <meta name="description" content="Get in touch with Spinor Innovations. We're here to help with your digital transformation needs. Call us at (214) 799-0953 or email hello@spinorinnovations.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4f46e5;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #4f46e5;
+        }
+
+        .page-hero {
+            padding: 140px 2rem 80px;
+            background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .page-hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-section {
+            padding: 80px 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            position: sticky;
+            top: 120px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        .contact-info p {
+            color: #64748b;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .info-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        .info-card:hover {
+            border-color: #4f46e5;
+            background: #f1f5f9;
+        }
+
+        .info-card h3 {
+            font-size: 1rem;
+            color: #4f46e5;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .info-card p {
+            color: #0f172a;
+            margin: 0;
+            font-size: 1.125rem;
+        }
+
+        .info-card a {
+            color: #0f172a;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .info-card a:hover {
+            color: #4f46e5;
+        }
+
+        .contact-form-wrapper {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .form-subtitle {
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #4f46e5;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #4338ca;
+            transform: translateY(-1px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .success-message {
+            display: none;
+            background: #dcfce7;
+            border: 1px solid #86efac;
+            color: #166534;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .business-hours {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .business-hours h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            color: #64748b;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hours-list strong {
+            color: #0f172a;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 3rem 2rem;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-about h3 {
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-about p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links h4 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-info {
+                position: static;
+            }
+
+            .contact-form-wrapper {
+                padding: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Spinor Innovations</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1>Let's Build Something Great Together</h1>
+        <p>Have a project in mind? We'd love to hear from you. Get in touch and let's discuss how we can help grow your business.</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>We typically respond within 24 hours. For urgent inquiries, please call us directly.</p>
+
+                <div class="info-card">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:hello@spinorinnovations.com">hello@spinorinnovations.com</a></p>
+                </div>
+
+                <div class="info-card">
+                    <h3>📞 Phone</h3>
+                    <p><a href="tel:+12147990953">(214) 799-0953</a></p>
+                </div>
+
+                <div class="info-card">
+                    <h3>📍 Location</h3>
+                    <p>Texas, United States<br>Serving clients worldwide</p>
+                </div>
+
+                <div class="business-hours">
+                    <h3>Business Hours</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span><strong>Monday - Friday</strong></span>
+                            <span>9:00 AM - 6:00 PM CST</span>
+                        </li>
+                        <li>
+                            <span><strong>Saturday</strong></span>
+                            <span>10:00 AM - 2:00 PM CST</span>
+                        </li>
+                        <li>
+                            <span><strong>Sunday</strong></span>
+                            <span>Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h3>Send Us a Message</h3>
+                <p class="form-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+                <div id="successMessage" class="success-message">
+                    ✓ Thank you! Your message has been sent successfully. We'll be in touch soon.
+                </div>
+
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="John">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(214) 123-4567">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Your Company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Interested In *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="website-development">Website Development</option>
+                            <option value="ai-chatbots">AI Chatbots & Agents</option>
+                            <option value="app-development">App Development</option>
+                            <option value="ecommerce">eCommerce Development</option>
+                            <option value="b2c-marketing">B2C Marketing</option>
+                            <option value="b2b-marketing">B2B Marketing</option>
+                            <option value="retention-marketing">Retention Marketing</option>
+                            <option value="consultation">General Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Project Budget</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range...</option>
+                            <option value="under-5k">Under $5,000</option>
+                            <option value="5k-10k">$5,000 - $10,000</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-50k">$25,000 - $50,000</option>
+                            <option value="50k-plus">$50,000+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Project *</label>
+                        <textarea id="message" name="message" required placeholder="Please provide details about your project, goals, and timeline..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Spinor Innovations</h3>
+                <p>We help businesses grow through smart digital solutions and AI-powered tools.</p>
+                <p>📧 hello@spinorinnovations.com</p>
+                <p>📞 (214) 799-0953</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">AI Chatbots</a></li>
+                    <li><a href="website-development.html">Web Development</a></li>
+                    <li><a href="services.html">App Development</a></li>
+                    <li><a href="services.html">Marketing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="services.html">Our Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="mailto:hello@spinorinnovations.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Spinor Innovations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                service: document.getElementById('service').value,
+                budget: document.getElementById('budget').value,
+                message: document.getElementById('message').value
+            };
+
+            // Create mailto link with form data
+            const subject = encodeURIComponent('Contact Form Submission - ' + formData.service);
+            const body = encodeURIComponent(
+                'Name: ' + formData.firstName + ' ' + formData.lastName + '\n' +
+                'Email: ' + formData.email + '\n' +
+                'Phone: ' + (formData.phone || 'Not provided') + '\n' +
+                'Company: ' + (formData.company || 'Not provided') + '\n' +
+                'Service: ' + formData.service + '\n' +
+                'Budget: ' + (formData.budget || 'Not specified') + '\n\n' +
+                'Message:\n' + formData.message
+            );
+            
+            window.location.href = 'mailto:hello@spinorinnovations.com?subject=' + subject + '&body=' + body;
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Hide success message after 5 seconds
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
