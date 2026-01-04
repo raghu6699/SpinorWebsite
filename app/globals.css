@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode (brand) */
+:root {
+  --brand-bg: #F4F3EE;
+  --brand-fg: #3D3929;
+  --brand-card: #FEFEFE;
+  --brand-muted: #F4F3EE;
+  --brand-border: rgba(61, 57, 41, 0.20);
+
+  --brand-primary: #DA7756;
+  --brand-primary-hover: #C15F3C;
+  --brand-accent: #B87555;
+  --brand-danger: #CF222E;
+
+  --brand-chart2: #4CC9F0;
+  --brand-chart3: #FFD166;
+  --brand-chart4: #9D4EDD;
+  --brand-chart5: #F28482;
+}
+
+/* Dark mode (brand) */
+.dark {
+  --brand-bg: #0D0D0D;
+  --brand-fg: #F0F6FC;
+  --brand-card: #161B22;
+  --brand-muted: #21262D;
+  --brand-border: #30363D;
+
+  /* Primary adjusts for dark backgrounds */
+  --brand-primary: #C15F3C;
+  --brand-primary-hover: #DA7756; /* brighten on hover */
+  --brand-accent: #B87555;
+  --brand-danger: #CF222E;
+
+  --brand-chart2: #4CC9F0;
+  --brand-chart3: #FFD166;
+  --brand-chart4: #9D4EDD;
+  --brand-chart5: #F28482;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--brand-bg);
+  color: var(--brand-fg);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
