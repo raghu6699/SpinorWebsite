@@ -1,32 +1,21 @@
-import Header from "@/components/site/Header";
-import Footer from "@/components/site/Footer";
-
-import Hero from "@/components/home/Hero";
-import ProofChips from "@/components/home/ProofChips";
-import PainOutcome from "@/components/home/PainOutcome";
-import ServicePillars from "@/components/home/ServicePillars";
-import UseCases from "@/components/home/UseCases";
-import HowItWorks from "@/components/home/HowItWorks";
-import PricingPreview from "@/components/home/PricingPreview";
-import FAQ from "@/components/home/FAQ";
-import FinalCTA from "@/components/home/FinalCTA";
-
 export default function HomePage() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <ProofChips />
-        <PainOutcome />
-        <ServicePillars />
-        <UseCases />
-        <HowItWorks />
-        <PricingPreview />
-        <FAQ />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </>
+    <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
+      <h1 style={{ color: '#4f46e5', fontSize: '2rem', marginBottom: '1rem' }}>
+        Spinor Innovations - New Website!
+      </h1>
+      <p style={{ fontSize: '1.2rem', lineHeight: '1.6' }}>
+        This is the new modern React-based website. If you can see this, the Next.js app is working!
+      </p>
+      <div style={{ marginTop: '2rem', padding: '1rem', backgroundColor: '#f8fafc', borderRadius: '8px' }}>
+        <h2 style={{ color: '#0f172a', marginBottom: '0.5rem' }}>Features:</h2>
+        <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem' }}>
+          <li>Modern React components</li>
+          <li>TypeScript support</li>
+          <li>Tailwind CSS styling</li>
+          <li>Component-based architecture</li>
+        </ul>
+      </div>
+    </div>
   );
 }
