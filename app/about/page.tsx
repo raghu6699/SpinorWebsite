@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "About | Spinor Innovations",
   description:
     "Spinor Innovations builds business-ready software, AI agents, and growth systems that reduce manual work and improve customer outcomes.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [

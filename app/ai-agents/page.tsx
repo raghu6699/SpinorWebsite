@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "AI Agents Hub | Spinor Innovations",
   description:
     "Spinor builds business-ready AI agents that answer customers, follow up leads, and run retention campaigns—safely, with guardrails, handoff rules, and KPI reporting.",
+  alternates: { canonical: "/ai-agents" },
 };
 
 const useCases = [
@@ -90,6 +91,7 @@ const packages = [
       "Guardrails + human handoff",
       "1 channel (web chat or email)",
       "Basic KPI report (weekly)",
+      "Change Management Pack available (training + SOPs + office hours)",
     ],
     goodFor: "Teams starting with a single workflow and clear ROI target.",
   },
@@ -105,6 +107,7 @@ const packages = [
       "CRM integration (lead/ticket updates)",
       "Prompt/testing iteration cadence",
       "KPI dashboard + weekly review",
+      "Change Management Pack included (role-based playbooks + KPI review)",
     ],
     goodFor: "Teams that want consistent follow-ups + support triage at the same time.",
   },
@@ -120,6 +123,7 @@ const packages = [
       "Quality controls + audit logs",
       "Monthly optimization roadmap",
       "Training + internal handover docs",
+      "Expanded Change Management Pack included (multi-team enablement + governance)",
     ],
     goodFor: "Teams ready to operationalize agents across customer lifecycle end-to-end.",
   },
@@ -127,20 +131,24 @@ const packages = [
 
 const faqs = [
   {
-    q: "Will the agent say the wrong thing?",
-    a: "We design for safety: approved knowledge sources, confidence thresholds, and human escalation. If confidence is low, the agent escalates instead of guessing.",
+    q: "What can the AI agents do?",
+    a: "They handle repeatable workflows like lead follow-up, customer support triage, retention campaigns, and internal operations—using rules and approved knowledge.",
   },
   {
-    q: "Where do agents get knowledge from?",
-    a: "From your approved sources—FAQs, docs, policies, product info, and structured data. We keep knowledge scoped and controlled.",
+    q: "How do you prevent the agent from making mistakes?",
+    a: "We add guardrails: approved knowledge only, confidence thresholds, escalation rules, and human approval for sensitive actions.",
   },
   {
-    q: "Can the agent update our CRM or ticketing tool?",
-    a: "Yes. We can connect actions like creating tickets, updating leads, booking meetings, and routing requests—based on rules you approve.",
+    q: "How long does a pilot take?",
+    a: "Most pilots run 2–4 weeks: discovery → setup → pilot → scale, with weekly KPI review and iteration.",
   },
   {
-    q: "How do we measure success?",
-    a: "We define KPIs upfront (response time, conversion, retention, tickets deflected, meetings booked) and review weekly during pilot and scale.",
+    q: "Can you integrate with our tools?",
+    a: "Yes. We integrate with your CRM, inbox, website, ticketing, analytics, and marketing tools—so the agent fits your workflow.",
+  },
+  {
+    q: "Do you support change management and training?",
+    a: "Yes. Adoption is built in: SOPs, playbooks, training (live + recorded), office hours during pilot, and adoption KPI tracking.",
   },
 ];
 
@@ -200,9 +208,29 @@ function BulletList({ items }: { items: string[] }) {
   );
 }
 
+function FAQJsonLd() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 export default function AIAgentsHubPage() {
   return (
     <main className="bg-brand-bg">
+      <FAQJsonLd />
       {/* HERO */}
       <section>
           <div className="mx-auto max-w-6xl px-6 pt-14 pb-10">
@@ -259,7 +287,7 @@ export default function AIAgentsHubPage() {
                   <BulletList items={u.bullets} />
                   <div className="mt-5">
                     <Link
-                      href={u.href}
+                      href={u.title === "Marketing Performance Agents" ? "/ai-agents-marketing" : u.href}
                       className="text-sm font-semibold text-brand-primary hover:underline"
                     >
                       View this use case →
@@ -308,6 +336,60 @@ export default function AIAgentsHubPage() {
           </div>
         </section>
 
+        {/* ADOPTION & CHANGE */}
+        <section id="adoption">
+          <div className="mx-auto max-w-6xl px-6 py-12">
+            <SectionTitle
+              eyebrow="Adoption matters"
+              title="AI isn't the hard part—adoption is."
+              desc="Agents only deliver outcomes when teams trust them and workflows change. We run a practical change track alongside build and integration—so your team knows what to do, when to trust the agent, and how to escalate."
+            />
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="rounded-md border border-brand-border bg-brand-card p-6 shadow-card dark:shadow-cardDark">
+                <h3 className="font-serif text-xl font-semibold">What we enable</h3>
+                <ul className="mt-3 space-y-2 text-sm opacity-90">
+                  {[
+                    "Agent boundaries: what it can do vs when it escalates",
+                    "Team training + quick guides (role-based)",
+                    "SOPs for handoff, approvals, and exceptions",
+                    "Adoption KPIs (usage, resolution, conversions)",
+                    "Weekly review loop to improve performance safely",
+                  ].map((it) => (
+                    <li key={it} className="flex gap-2">
+                      <span className="mt-1 inline-block h-2 w-2 rounded-full bg-brand-primary" />
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-5">
+                  <ButtonLink href="/change-management" variant="secondary">
+                    Learn about Change Management
+                  </ButtonLink>
+                </div>
+              </div>
+
+              <div className="rounded-md border border-brand-border bg-brand-muted p-6">
+                <h3 className="font-serif text-xl font-semibold">How teams adopt faster</h3>
+                <p className="mt-3 text-sm opacity-90 leading-relaxed">
+                  Launch day isn't the finish line. We define the operating rhythm: who owns what, when to escalate,
+                  what "good" looks like, and how performance improves week over week.
+                </p>
+
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                  <ButtonLink href="/contact" variant="primary">
+                    Talk to an Expert
+                  </ButtonLink>
+                  <ButtonLink href="#use-cases" variant="secondary">
+                    See Use Cases
+                  </ButtonLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* HOW IMPLEMENTATION WORKS */}
         <section id="process">
           <div className="mx-auto max-w-6xl px-6 py-12">
@@ -347,6 +429,16 @@ export default function AIAgentsHubPage() {
               title="Starter / Growth / Scale"
               desc="Designed around the exact use cases above—so you can start small and scale confidently."
             />
+
+            <div className="mb-6 rounded-md border border-brand-border bg-brand-muted p-6">
+              <div className="text-xs font-semibold opacity-70">Optional Add-On</div>
+              <h3 className="mt-2 font-serif text-xl font-semibold">
+                Change Management Pack (recommended for faster adoption)
+              </h3>
+              <p className="mt-2 text-sm opacity-90">
+                Training, SOPs, internal launch comms templates, and adoption KPIs—so teams actually use the agent workflows after go-live.
+              </p>
+            </div>
 
             <div className="grid gap-6 md:grid-cols-3">
               {packages.map((p) => (

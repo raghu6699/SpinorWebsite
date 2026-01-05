@@ -23,6 +23,7 @@ export default function Header() {
         <nav className="hidden items-center gap-6 text-sm md:flex">
           <Link href="/services" className="hover:underline">Services</Link>
           <Link href="/ai-agents" className="hover:underline">AI Agents</Link>
+          <Link href="/change-management" className="hover:underline">Change Management</Link>
           <Link href="/about" className="hover:underline">About</Link>
           <Link href="/contact" className="hover:underline">Contact</Link>
         </nav>

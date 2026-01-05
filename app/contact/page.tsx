@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Contact | Spinor Innovations",
   description:
     "Get in touch with Spinor Innovations. Let's discuss how we can help with your software, AI agents, and growth systems.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
