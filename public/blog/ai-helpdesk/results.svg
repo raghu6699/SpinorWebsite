@@ -1,0 +1,116 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#bgGrad2)"/>
+  
+  <!-- Header -->
+  <rect x="60" y="60" width="1800" height="100" rx="12" fill="url(#cardGrad2)"/>
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="32" fill="#e2e8f0" font-weight="700">Performance Dashboard - 3 Month Results</text>
+  <text x="1600" y="120" font-family="Arial, sans-serif" font-size="18" fill="#22c55e" font-weight="600">Q1 2026</text>
+  
+  <!-- Main metric cards -->
+  <rect x="60" y="200" width="420" height="200" rx="12" fill="url(#cardGrad2)"/>
+  <text x="100" y="250" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">Ticket Deflection</text>
+  <text x="100" y="310" font-family="Arial, sans-serif" font-size="64" fill="#22c55e" font-weight="700">35%</text>
+  <text x="100" y="350" font-family="Arial, sans-serif" font-size="16" fill="#64748b">↑ 12% from baseline</text>
+  
+  <rect x="520" y="200" width="420" height="200" rx="12" fill="url(#cardGrad2)"/>
+  <text x="560" y="250" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">Avg First Response</text>
+  <text x="560" y="310" font-family="Arial, sans-serif" font-size="64" fill="#3b82f6" font-weight="700">2.3s</text>
+  <text x="560" y="350" font-family="Arial, sans-serif" font-size="16" fill="#64748b">↓ 94% faster than human</text>
+  
+  <rect x="980" y="200" width="420" height="200" rx="12" fill="url(#cardGrad2)"/>
+  <text x="1020" y="250" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">Customer Satisfaction</text>
+  <text x="1020" y="310" font-family="Arial, sans-serif" font-size="64" fill="#f59e0b" font-weight="700">4.8/5</text>
+  <text x="1020" y="350" font-family="Arial, sans-serif" font-size="16" fill="#64748b">↑ 0.6 points improvement</text>
+  
+  <rect x="1440" y="200" width="420" height="200" rx="12" fill="url(#cardGrad2)"/>
+  <text x="1480" y="250" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">Resolution Rate</text>
+  <text x="1480" y="310" font-family="Arial, sans-serif" font-size="64" fill="#8b5cf6" font-weight="700">92%</text>
+  <text x="1480" y="350" font-family="Arial, sans-serif" font-size="16" fill="#64748b">Without human intervention</text>
+  
+  <!-- Large chart area -->
+  <rect x="60" y="440" width="1340" height="580" rx="12" fill="url(#cardGrad2)"/>
+  <text x="100" y="490" font-family="Arial, sans-serif" font-size="24" fill="#e2e8f0" font-weight="700">Monthly Ticket Volume Comparison</text>
+  
+  <!-- Chart legend -->
+  <rect x="100" y="520" width="20" height="20" rx="4" fill="#ef4444" opacity="0.7"/>
+  <text x="130" y="536" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Before AI Agent</text>
+  
+  <rect x="280" y="520" width="20" height="20" rx="4" fill="#22c55e" opacity="0.7"/>
+  <text x="310" y="536" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">After AI Agent</text>
+  
+  <!-- Bar chart - Before (red) vs After (green) -->
+  <!-- January -->
+  <rect x="140" y="650" width="80" height="300" rx="4" fill="#ef4444" opacity="0.6"/>
+  <rect x="240" y="800" width="80" height="150" rx="4" fill="#22c55e" opacity="0.7"/>
+  <text x="175" y="1000" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">Jan</text>
+  
+  <!-- February -->
+  <rect x="400" y="620" width="80" height="330" rx="4" fill="#ef4444" opacity="0.6"/>
+  <rect x="500" y="780" width="80" height="170" rx="4" fill="#22c55e" opacity="0.7"/>
+  <text x="435" y="1000" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">Feb</text>
+  
+  <!-- March -->
+  <rect x="660" y="600" width="80" height="350" rx="4" fill="#ef4444" opacity="0.6"/>
+  <rect x="760" y="760" width="80" height="190" rx="4" fill="#22c55e" opacity="0.7"/>
+  <text x="695" y="1000" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">Mar</text>
+  
+  <!-- April -->
+  <rect x="920" y="580" width="80" height="370" rx="4" fill="#ef4444" opacity="0.6"/>
+  <rect x="1020" y="750" width="80" height="200" rx="4" fill="#22c55e" opacity="0.7"/>
+  <text x="955" y="1000" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">Apr</text>
+  
+  <!-- May -->
+  <rect x="1180" y="570" width="80" height="380" rx="4" fill="#ef4444" opacity="0.6"/>
+  <rect x="1280" y="740" width="80" height="210" rx="4" fill="#22c55e" opacity="0.7"/>
+  <text x="1215" y="1000" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">May</text>
+  
+  <!-- Right sidebar - Key insights -->
+  <rect x="1440" y="440" width="420" height="580" rx="12" fill="url(#cardGrad2)"/>
+  <text x="1480" y="490" font-family="Arial, sans-serif" font-size="24" fill="#e2e8f0" font-weight="700">Key Insights</text>
+  
+  <!-- Insight 1 -->
+  <circle cx="1500" cy="550" r="12" fill="#22c55e" opacity="0.3"/>
+  <text x="1500" y="556" font-family="Arial, sans-serif" font-size="18" fill="#22c55e" font-weight="700" text-anchor="middle">✓</text>
+  <text x="1530" y="556" font-family="Arial, sans-serif" font-size="16" fill="#cbd5e1" font-weight="600">35% reduction</text>
+  <text x="1530" y="580" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">in repetitive tickets</text>
+  
+  <!-- Insight 2 -->
+  <circle cx="1500" cy="640" r="12" fill="#3b82f6" opacity="0.3"/>
+  <text x="1500" y="646" font-family="Arial, sans-serif" font-size="18" fill="#3b82f6" font-weight="700" text-anchor="middle">✓</text>
+  <text x="1530" y="646" font-family="Arial, sans-serif" font-size="16" fill="#cbd5e1" font-weight="600">Instant responses</text>
+  <text x="1530" y="670" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">24/7 availability</text>
+  
+  <!-- Insight 3 -->
+  <circle cx="1500" cy="730" r="12" fill="#f59e0b" opacity="0.3"/>
+  <text x="1500" y="736" font-family="Arial, sans-serif" font-size="18" fill="#f59e0b" font-weight="700" text-anchor="middle">✓</text>
+  <text x="1530" y="736" font-family="Arial, sans-serif" font-size="16" fill="#cbd5e1" font-weight="600">Higher CSAT</text>
+  <text x="1530" y="760" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">+0.6 point increase</text>
+  
+  <!-- Insight 4 -->
+  <circle cx="1500" cy="820" r="12" fill="#8b5cf6" opacity="0.3"/>
+  <text x="1500" y="826" font-family="Arial, sans-serif" font-size="18" fill="#8b5cf6" font-weight="700" text-anchor="middle">✓</text>
+  <text x="1530" y="826" font-family="Arial, sans-serif" font-size="16" fill="#cbd5e1" font-weight="600">Agent focus</text>
+  <text x="1530" y="850" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">More complex cases</text>
+  
+  <!-- Insight 5 -->
+  <circle cx="1500" cy="910" r="12" fill="#ec4899" opacity="0.3"/>
+  <text x="1500" y="916" font-family="Arial, sans-serif" font-size="18" fill="#ec4899" font-weight="700" text-anchor="middle">✓</text>
+  <text x="1530" y="916" font-family="Arial, sans-serif" font-size="16" fill="#cbd5e1" font-weight="600">Cost savings</text>
+  <text x="1530" y="940" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">Reduced overhead</text>
+  
+  <!-- ROI indicator -->
+  <rect x="1480" y="970" width="340" height="30" rx="6" fill="#22c55e" opacity="0.2"/>
+  <text x="1650" y="992" font-family="Arial, sans-serif" font-size="14" fill="#22c55e" font-weight="700" text-anchor="middle">ROI: 280% in 3 months</text>
+</svg>
